@@ -1,13 +1,6 @@
 (function (angular) {
     "use strict";
 
-	function Region (x, y, height, width) {
-		this.fileName = '';
-		this.x = x ? +x : 30;
-		this.y = y ? +y : 30;
-		this.height = height ? +height : 30;
-		this.width  = width ? +width : 30;
-	};
 	var module = angular.module('net.enzey.image-splicer', []);
 
 	module.service('PrimaryImage', function() {
