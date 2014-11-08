@@ -88,7 +88,7 @@
 					regions.forEach(function(region) {
 						canvas.beginPath();
 						canvas.lineWidth="2";
-						canvas.strokeStyle="red";
+						canvas.strokeStyle=region.color;
 						canvas.rect(region.x, region.y, region.width, region.height);
 						canvas.stroke();
 					});
