@@ -15,7 +15,7 @@
 		}
 	});
 
-	module.directive("spinner", function ($compile, $parse) {
+	module.directive("spinner", ['$compile', '$parse', function ($compile, $parse) {
 		return {
 			scope: {},
 			compile: function ($element, $attrs) {
@@ -45,9 +45,9 @@
 				};
 			}
 		}
-	});
+	}]);
 
-	module.directive("fileSelector", function ($parse) {
+	module.directive("fileSelector", ['$parse', function ($parse) {
 		return {
 			compile: function ($element, $attrs) {
 				var directiveName = this.name;
@@ -65,9 +65,9 @@
 				};
 			}
 		}
-	});
+	}]);
 
-	module.directive('canvasManager', function($parse, PrimaryImage) {
+	module.directive('canvasManager', ['$parse', 'PrimaryImage', function($parse, PrimaryImage) {
 		return {
 			restrict: 'AE',
 			compile: function ($element, $attrs) {
@@ -153,6 +153,6 @@
 				};
 			}
 		};
-	});
+	}]);
 
 })(angular, JSZip);
